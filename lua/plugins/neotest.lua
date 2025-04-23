@@ -28,9 +28,12 @@ return {
 			adapters = {
 				require("neotest-golang"),
 			},
+			output = {
+				open_on_run = false,
+			},
+
 			diagnostic = {
 				enabled = true,
-				prefix = "TEST: ",
 			},
 		})
 	end,
