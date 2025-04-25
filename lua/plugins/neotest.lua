@@ -22,11 +22,22 @@ return {
 			end,
 			desc = "[T]est [O]utput",
 		},
+		{
+			"<leader>td",
+			function()
+				require("neotest").run.run({ strategy = "dap" })
+			end,
+			desc = "[T]est [Debug] nearest",
+		},
 	},
 	config = function()
 		require("neotest").setup({
 			adapters = {
-				require("neotest-golang"),
+				require("neotest-golang")({
+					dap_go_opts = {
+						mode = "test",
+					},
+				}),
 			},
 			output = {
 				open_on_run = false,
