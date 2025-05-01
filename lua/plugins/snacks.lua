@@ -15,5 +15,40 @@ return {
 		picker = {
 			enabled = true,
 		},
+		dashboard = {
+			enabled = true,
+			sections = {
+				{ section = "header" },
+				{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+				{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+				{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+				{ section = "startup" },
+			},
+		},
+		indent = {
+			enabled = true,
+		},
+		lazygit = {
+			enabled = true,
+		},
+		terminal = {
+			enabled = true,
+		},
+	},
+	keys = {
+		{
+			"<leader>lg",
+			function()
+				Snacks.lazygit()
+			end,
+			desc = "Lazygit",
+		},
+		{
+			"<leader>'",
+			function()
+				Snacks.terminal()
+			end,
+			desc = "Toggle Terminal",
+		},
 	},
 }
