@@ -208,6 +208,7 @@ return {
 			gopls = {},
 			golangci_lint_ls = {},
 			rust_analyzer = {},
+			ansiblels = {},
 			-- clangd = {},
 			-- pyright = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
