@@ -209,6 +209,7 @@ return {
 			golangci_lint_ls = {},
 			rust_analyzer = {},
 			ansiblels = {},
+			docker_compose_language_service = {},
 			-- clangd = {},
 			-- pyright = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
