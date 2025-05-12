@@ -5,6 +5,7 @@ return {
 			lua = { "stylua" },
 			go = { "gofumpt", "goimports" },
 			ansible = { "ansible-lint" },
+			rust = { "rustfmt" },
 		},
 		format_on_save = {
 			timeout_ms = 3000,

@@ -1,3 +1,14 @@
 return {
-	"github/copilot.vim",
+	"zbirenbaum/copilot.lua",
+	opts = {
+		filetypes = {
+			["*"] = true,
+		},
+		suggestion = {
+			auto_trigger = true,
+			keymap = {
+				accept = "<Tab>",
+			},
+		},
+	},
 }
