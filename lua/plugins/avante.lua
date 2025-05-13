@@ -4,15 +4,15 @@ return {
 	version = false,
 	opts = {
 		provider = "copilot",
-		-- provider = "openai",
-		-- openai = {
-		-- 	endpoint = "https://api.openai.com/v1",
-		-- 	model = "o4-mini",
-		-- 	timeout = 30000,
-		-- 	temperature = 0,
-		-- 	max_completion_tokens = 8192,
-		-- 	--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-		-- },
+		copilot = {
+			endpoint = "https://api.githubcopilot.com",
+			model = "claude-3.7-sonnet",
+			allow_insecure = false,
+			timeout = 30000,
+			temperature = 0,
+			max_tokens = 20480,
+			--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+		},
 	},
 	build = "make",
 	dependencies = {

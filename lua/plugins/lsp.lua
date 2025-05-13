@@ -1,13 +1,8 @@
 return {
-	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "williamboman/mason.nvim", opts = {} },
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-
-		-- Useful status updates for LSP.
-		{ "j-hui/fidget.nvim", opts = {} },
+		{ "mason-org/mason.nvim", opts = {} },
+		{ "mason-org/mason-lspconfig.nvim", opts = {} },
 	},
 	config = function()
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -20,37 +15,22 @@ return {
 
 				-- Keymaps
 				map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
-				map("gra", vim.lsp.buf.code_action, "[G]o to Code [A]ction", { "n", "x" })
+				map("gra", require("fzf-lua").lsp_code_actions, "[G]o to Code [A]ction")
 				map("grr", require("fzf-lua").lsp_references, "[G]oto [R]eferences")
 				map("gri", require("fzf-lua").lsp_implementations, "[G]oto [I]mplementation")
 				map("grd", require("fzf-lua").lsp_definitions, "[G]oto [D]efinition")
-				map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+				map("grD", require("fzf-lua").lsp_declarations, "[G]oto [D]eclaration")
 				map("gO", require("fzf-lua").lsp_document_symbols, "Document Symbols")
 				map("gW", require("fzf-lua").lsp_live_workspace_symbols, "[W]orkspace Symbols")
 				map("grt", require("fzf-lua").lsp_typedefs, "[T]ype Definition")
-
-				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
-				---@param client vim.lsp.Client
-				---@param method vim.lsp.protocol.Method
-				---@param bufnr? integer some lsp support methods only in specific files
-				---@return boolean
-				local function client_supports_method(client, method, bufnr)
-					if vim.fn.has("nvim-0.11") == 1 then
-						return client:supports_method(method, bufnr)
-					else
-						return client.supports_method(method, { bufnr = bufnr })
-					end
-				end
+				map("gdd", require("fzf-lua").lsp_document_diagnostics, "[G]oto [D]ocument [D]iagnostics")
+				map("gwd", require("fzf-lua").lsp_workspace_diagnostics, "[G]oto [W]orkspace [D]iagnostics")
 
 				-- When you move your cursor, the highlights will be cleared (the second autocommand).
 				local client = vim.lsp.get_client_by_id(event.data.client_id)
 				if
 					client
-					and client_supports_method(
-						client,
-						vim.lsp.protocol.Methods.textDocument_documentHighlight,
-						event.buf
-					)
+					and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
 				then
 					local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
 					vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -75,10 +55,7 @@ return {
 				end
 
 				-- Inlay Hints
-				if
-					client
-					and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf)
-				then
+				if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
 					map("<leader>th", function()
 						vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 					end, "[T]oggle Inlay [H]ints")
@@ -110,59 +87,6 @@ return {
 						[vim.diagnostic.severity.HINT] = diagnostic.message,
 					}
 					return diagnostic_message[diagnostic.severity]
-				end,
-			},
-		})
-
-		-- LSP servers and clients are able to communicate to each other what features they support.
-		--  By default, Neovim doesn't support everything that is in the LSP specification.
-		--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-		--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-		local original_capabilities = vim.lsp.protocol.make_client_capabilities()
-		local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
-
-		-- Enable the following language servers
-		local servers = {
-			bashls = {
-				filetypes = { "sh", "zsh" },
-			},
-			marksman = {},
-			gopls = {},
-			golangci_lint_ls = {},
-			rust_analyzer = {},
-			ansiblels = {},
-			docker_compose_language_service = {},
-			lua_ls = {},
-		}
-
-		-- Ensure the servers and tools above are installed
-		-- You can add other tools here that you want Mason to install
-		-- for you, so that they are available from within Neovim.
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
-			"bashls", -- bash language server
-			"stylua", -- Used to format Lua code
-			"gofumpt", -- stricter gofmt
-			"goimports", -- import formatter
-			"golangci-lint", -- go linter
-			"marksman", -- markdown language server
-			"gopls", -- go language server
-			"rust_analyzer", -- rust language server
-			"ansiblels", -- ansible language server
-			"ansible-lint", -- ansible linter
-			"docker_compose_language_service", -- docker compose language server
-			"lua_ls", -- lua language server
-		})
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
-		require("mason-lspconfig").setup({
-			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-			automatic_installation = false,
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					require("lspconfig")[server_name].setup(server)
 				end,
 			},
 		})

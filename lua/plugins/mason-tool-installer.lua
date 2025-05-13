@@ -1,0 +1,19 @@
+return {
+	"WhoIsSethDaniel/mason-tool-installer.nvim",
+	opts = {
+		"ansiblels",
+		"ansible-lint",
+		"bashls",
+		"docker_compose_language_service",
+		"go-debug-adapter",
+		"gofumpt",
+		"goimports",
+		"golangci-lint",
+		"golangci-lint-langserver",
+		"gopls",
+		"marksman",
+		"rust_analyzer",
+		"stylua",
+		"lua_ls",
+	},
+}
