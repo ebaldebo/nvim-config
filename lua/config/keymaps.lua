@@ -2,8 +2,8 @@ vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", { desc = "Open Parent Directory
 vim.keymap.set("n", "gl", function()
 	vim.diagnostic.open_float()
 end, { desc = "Open Diagnostics in float" })
-vim.keymap.set("n", "<leader>cf", function()
+vim.keymap.set("n", "gf", function()
 	require("conform").format({
 		lsp_format = "fallback",
 	})
-end, { desc = "[C]ode [F]ormat file" })
+end, { desc = "[F]ormat file" })
