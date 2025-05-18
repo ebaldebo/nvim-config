@@ -8,9 +8,9 @@ return {
 		{ "<C-k>", "<cmd>lua require('smart-splits').move_cursor_up()<CR>", desc = "Move cursor up" },
 		{ "<C-l>", "<cmd>lua require('smart-splits').move_cursor_right()<CR>", desc = "Move cursor right" },
 		-- Resize splits
-		{ "<C-S-h>", "<cmd>lua require('smart-splits').resize_left()<CR>", desc = "Resize left" },
-		{ "<C-S-j>", "<cmd>lua require('smart-splits').resize_down()<CR>", desc = "Resize down" },
-		{ "<C-S-k>", "<cmd>lua require('smart-splits').resize_up()<CR>", desc = "Resize up" },
-		{ "<C-S-l>", "<cmd>lua require('smart-splits').resize_right()<CR>", desc = "Resize right" },
+		{ "<M-h>", "<cmd>lua require('smart-splits').resize_left()<CR>", desc = "Resize left" },
+		{ "<M-j>", "<cmd>lua require('smart-splits').resize_down()<CR>", desc = "Resize down" },
+		{ "<M-k>", "<cmd>lua require('smart-splits').resize_up()<CR>", desc = "Resize up" },
+		{ "<M-l>", "<cmd>lua require('smart-splits').resize_right()<CR>", desc = "Resize right" },
 	},
 }
