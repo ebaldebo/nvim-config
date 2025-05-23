@@ -9,6 +9,7 @@ vim.opt.autoindent = true -- Keep indentation from previous line
 vim.opt.breakindent = true -- Enable break indent
 
 vim.opt.number = true -- Line numbers
+vim.opt.relativenumber = true -- Relative line numbers
 
 vim.opt.cursorline = true
 

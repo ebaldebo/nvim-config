@@ -3,6 +3,9 @@ return {
 	opts = {
 		"ansiblels",
 		"ansible-lint",
+		"clangd",
+		"clang_format",
+		"cpplint",
 		"bashls",
 		"docker_compose_language_service",
 		"go-debug-adapter",
