@@ -4,14 +4,17 @@ return {
 	version = false,
 	opts = {
 		provider = "copilot",
-		copilot = {
-			endpoint = "https://api.githubcopilot.com",
-			model = "claude-3.7-sonnet",
-			allow_insecure = false,
-			timeout = 30000,
-			temperature = 0,
-			max_tokens = 20480,
-			--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+		providers = {
+			copilot = {
+				endpoint = "https://api.githubcopilot.com",
+				model = "claude-3.7-sonnet",
+				allow_insecure = false,
+				timeout = 30000,
+				extra_request_body = {
+					temperature = 0,
+					max_tokens = 20480,
+				},
+			},
 		},
 	},
 	build = "make",
