@@ -38,3 +38,5 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vim.opt.scrolloff = 10 -- Minimum lines above and below
+
+vim.opt.updatetime = 250
