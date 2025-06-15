@@ -1,26 +1,27 @@
 return {
 	"nvim-neotest/neotest",
 	dependencies = {
-		"nvim-lua/plenary.nvim",
 		"nvim-neotest/nvim-nio",
+		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
 		{ "fredrikaverpil/neotest-golang", version = "*" },
 	},
 	keys = {
 		{
-			"<leader>tt",
-			function()
-				require("neotest").run.run()
-			end,
-			desc = "[T]est Nearest",
+			"<leader>tr",
+			"<cmd>Neotest run<cr>",
+			desc = "[T]est [R]un",
 		},
 		{
 			"<leader>to",
-			function()
-				require("neotest").output.open({ enter = true })
-			end,
+			"<cmd>Neotest output<cr>",
 			desc = "[T]est [O]utput",
+		},
+		{
+			"<leader>ts",
+			"<cmd>Neotest summary<cr>",
+			desc = "[T]est [S]ummary",
 		},
 		{
 			"<leader>td",
@@ -31,20 +32,10 @@ return {
 		},
 	},
 	config = function()
+		local neotest_golang_opts = {}
 		require("neotest").setup({
 			adapters = {
-				require("neotest-golang")({
-					dap_go_opts = {
-						mode = "test",
-					},
-				}),
-			},
-			output = {
-				open_on_run = false,
-			},
-
-			diagnostic = {
-				enabled = true,
+				require("neotest-golang")(neotest_golang_opts),
 			},
 		})
 	end,
