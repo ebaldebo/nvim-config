@@ -7,7 +7,7 @@ return {
 		providers = {
 			copilot = {
 				endpoint = "https://api.githubcopilot.com",
-				model = "claude-3.7-sonnet",
+				model = "claude-sonnet-4",
 				allow_insecure = false,
 				timeout = 30000,
 				extra_request_body = {
@@ -16,14 +16,20 @@ return {
 				},
 			},
 		},
+		input = {
+			provider = "snacks",
+			provider_opts = {
+				title = "Avante Input",
+				icon = "",
+			},
+		},
 	},
 	build = "make",
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-		"stevearc/dressing.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
-		-- "echasnovski/mini.pick",
+		-- Optional dependencies
+		"folke/snacks.nvim",
 		"ibhagwan/fzf-lua",
 		"nvim-tree/nvim-web-devicons",
 		"zbirenbaum/copilot.lua",
