@@ -2,6 +2,7 @@ vim.lsp.enable({
 	"gopls",
 	"golangci_lint_ls",
 	"lua_ls",
+	"nil_ls",
 })
 
 vim.diagnostic.config({

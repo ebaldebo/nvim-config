@@ -4,6 +4,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "gofumpt", "goimports" },
+			nix = { "nixfmt" },
 			-- ansible = { "ansible-lint" },
 			-- rust = { "rustfmt" },
 			-- cpp = { "clang_format" },
