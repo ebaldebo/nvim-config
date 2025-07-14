@@ -4,6 +4,7 @@ return {
 	priority = 1000,
 	opts = {
 		flavour = "mocha", -- latte, frappe, macchiato, mocha
+		transparent_background = true,
 		integrations = {
 			blink_cmp = true,
 			fzf = true,
@@ -11,7 +12,6 @@ return {
 				enabled = true,
 				transparent = false,
 			},
-			mason = true,
 			mini = {
 				enabled = true,
 				indentscope_color = "lavender",
