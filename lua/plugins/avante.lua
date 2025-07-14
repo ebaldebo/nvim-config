@@ -31,11 +31,17 @@ return {
 		-- Optional dependencies
 		"folke/snacks.nvim",
 		"ibhagwan/fzf-lua",
-		"nvim-tree/nvim-web-devicons",
+		"echasnovski/mini.icons",
 		"zbirenbaum/copilot.lua",
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
 			opts = {
+				html = {
+					enabled = false,
+				},
+				latex = {
+					enabled = false,
+				},
 				file_types = { "markdown", "Avante" },
 			},
 			ft = { "markdown", "Avante" },
