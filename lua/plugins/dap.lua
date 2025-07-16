@@ -2,10 +2,73 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
-			"leoluz/nvim-dap-go",
+			-- UI
 			"rcarriga/nvim-dap-ui",
-			"theHamsta/nvim-dap-virtual-text",
+			-- Required dependency for nvim-dap
 			"nvim-neotest/nvim-nio",
+			-- Language specific debug adapters
+			"leoluz/nvim-dap-go",
+			-- Virtual text for nvim-dap
+			"theHamsta/nvim-dap-virtual-text",
+		},
+		keys = {
+			{
+				"<space>db",
+				function()
+					require("dap").toggle_breakpoint()
+				end,
+				desc = "Debug Toggle breakpoint",
+			},
+			{
+				"<space>dk",
+				function()
+					require("dapui").eval(nil, { enter = true })
+				end,
+				desc = "Debug evaluate",
+			},
+			{
+				"<space>dc",
+				function()
+					require("dap").continue()
+				end,
+				desc = "Debug Start/Continue",
+			},
+			{
+				"<space>dC",
+				function()
+					require("dap").terminate()
+					require("dapui").close()
+				end,
+				desc = "Debug Stop",
+			},
+			{
+				"<space>di",
+				function()
+					require("dap").step_into()
+				end,
+				desc = "Debug Step into",
+			},
+			{
+				"<space>dI",
+				function()
+					require("dap").step_out()
+				end,
+				desc = "Debug Step out",
+			},
+			{
+				"<space>do",
+				function()
+					require("dap").step_over()
+				end,
+				desc = "Debug Step over",
+			},
+			{
+				"<space>dr",
+				function()
+					require("dap").restart()
+				end,
+				desc = "Debug Restart",
+			},
 		},
 		config = function()
 			local dap = require("dap")
@@ -13,26 +76,6 @@ return {
 
 			require("dapui").setup()
 			require("dap-go").setup()
-
-			require("nvim-dap-virtual-text").setup()
-
-			vim.keymap.set("n", "<space>db", dap.toggle_breakpoint, { desc = "Debug Toggle [B]reakpoint" })
-			vim.keymap.set("n", "<space>gb", dap.run_to_cursor, { desc = "Debug go to cursor" })
-
-			-- Eval var under cursor
-			vim.keymap.set("n", "<space>dv", function()
-				require("dapui").eval(nil, { enter = true })
-			end, { desc = "Debug evaluate" })
-
-			vim.keymap.set("n", "<space>dc", dap.continue, { desc = "Debug Start/Continue" })
-			vim.keymap.set("n", "<space>dC", function()
-				dap.terminate()
-				ui.close()
-			end, { desc = "Debug Stop" })
-			vim.keymap.set("n", "<space>di", dap.step_into, { desc = "Debug Step into" })
-			vim.keymap.set("n", "<space>dI", dap.step_out, { desc = "Debug Step out" })
-			vim.keymap.set("n", "<space>do", dap.step_over, { desc = "Debug Step over" })
-			vim.keymap.set("n", "<space>dr", dap.restart, { desc = "Debug Restart" })
 
 			dap.listeners.before.attach.dapui_config = function()
 				ui.open()
@@ -46,6 +89,14 @@ return {
 			dap.listeners.before.event_exited.dapui_config = function()
 				ui.close()
 			end
+
+			require("nvim-dap-virtual-text").setup()
+
+			require("dap-go").setup({
+				delve = {
+					path = vim.fn.exepath("dlv") ~= "" and vim.fn.exepath("dlv") or "dlv",
+				},
+			})
 		end,
 	},
 }
