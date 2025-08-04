@@ -1,5 +1,7 @@
 require("config.options")
+require("config.globals")
 require("core.lazy")
 require("config.lsp")
 require("config.keymaps")
 require("config.autocmds")
+require("pluginstmp.cinnamon")
