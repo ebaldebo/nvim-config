@@ -31,5 +31,4 @@ require("lazy").setup({
 	},
 })
 
-vim.cmd("ShowkeysToggle")
 vim.cmd.colorscheme("catppuccin")
