@@ -6,7 +6,6 @@ return {
 		flavour = "mocha", -- latte, frappe, macchiato, mocha
 		transparent_background = true,
 		integrations = {
-			blink_cmp = true,
 			fzf = true,
 			gitsigns = {
 				enabled = true,
@@ -46,5 +45,20 @@ return {
 			},
 			which_key = true,
 		},
+		custom_highlights = function(colors)
+			return {
+				-- Native completion popup menu
+				Pmenu = { bg = colors.surface0, fg = colors.text },
+				PmenuSel = { bg = colors.surface1, fg = colors.text, style = { "bold" } },
+				PmenuSbar = { bg = colors.surface1 },
+				PmenuThumb = { bg = colors.overlay0 },
+
+				-- Completion item kinds (LSP)
+				PmenuKind = { bg = colors.surface0, fg = colors.lavender },
+				PmenuKindSel = { bg = colors.surface1, fg = colors.lavender, style = { "bold" } },
+				PmenuExtra = { bg = colors.surface0, fg = colors.subtext1 },
+				PmenuExtraSel = { bg = colors.surface1, fg = colors.subtext1 },
+			}
+		end,
 	},
 }
