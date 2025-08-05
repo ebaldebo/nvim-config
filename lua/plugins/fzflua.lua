@@ -1,9 +1,11 @@
 vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
 vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
+	"https://github.com/ebaldebo/project-finder.nvim",
 })
 
 require("fzf-lua").setup({})
+require("project-finder").setup()
 
 vim.keymap.set("n", "<leader>ff", function()
 	require("fzf-lua").files()
@@ -56,3 +58,24 @@ end, { desc = "[ ] Find existing buffers" })
 vim.keymap.set("n", "<leader>/", function()
 	require("fzf-lua").lgrep_curbuf()
 end, { desc = "[/] Live grep current buffer" })
+
+vim.keymap.set("n", "<leader>fp", function()
+	local display_projects, project_paths = require("project-finder").get_display_projects()
+	require("fzf-lua").fzf_exec(display_projects, {
+		prompt = "Projects> ",
+		actions = {
+			["default"] = function(selected)
+				if #selected > 0 then
+					-- Find the corresponding full path
+					local selected_display = selected[1]
+					for i, display_name in ipairs(display_projects) do
+						if display_name == selected_display then
+							require("project-finder").change_to_project(project_paths[i])
+							break
+						end
+					end
+				end
+			end,
+		},
+	})
+end, { desc = "[F]ind [P]rojects" })
