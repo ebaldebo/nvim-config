@@ -1,12 +1,10 @@
-return {
-	"stevearc/oil.nvim",
-	---@module 'oil'
-	---@type oil.SetupOpts
-	opts = {
-		view_options = {
-			show_hidden = true,
-		},
+vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
+vim.pack.add({
+	"https://github.com/stevearc/oil.nvim",
+})
+
+require("oil").setup({
+	view_options = {
+		show_hidden = true,
 	},
-	dependencies = { { "echasnovski/mini.icons", opts = {} } },
-	lazy = false,
-}
+})

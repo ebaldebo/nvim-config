@@ -1,6 +1,8 @@
-return {
-	"m4xshen/hardtime.nvim",
-	lazy = false,
-	dependencies = { "MunifTanjim/nui.nvim" },
-	opts = {},
-}
+vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
+vim.pack.add({
+	"https://github.com/m4xshen/hardtime.nvim",
+	-- Dependencies
+	"https://github.com/MunifTanjim/nui.nvim",
+})
+
+require("hardtime").setup()

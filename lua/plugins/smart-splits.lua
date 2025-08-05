@@ -1,16 +1,35 @@
-return {
-	"mrjones2014/smart-splits.nvim",
-	opts = {},
-	keys = {
-		-- Move cursor between splits
-		{ "<C-h>", "<cmd>lua require('smart-splits').move_cursor_left()<CR>", desc = "Move cursor left" },
-		{ "<C-j>", "<cmd>lua require('smart-splits').move_cursor_down()<CR>", desc = "Move cursor down" },
-		{ "<C-k>", "<cmd>lua require('smart-splits').move_cursor_up()<CR>", desc = "Move cursor up" },
-		{ "<C-l>", "<cmd>lua require('smart-splits').move_cursor_right()<CR>", desc = "Move cursor right" },
-		-- Resize splits
-		{ "<M-h>", "<cmd>lua require('smart-splits').resize_left()<CR>", desc = "Resize left" },
-		{ "<M-j>", "<cmd>lua require('smart-splits').resize_down()<CR>", desc = "Resize down" },
-		{ "<M-k>", "<cmd>lua require('smart-splits').resize_up()<CR>", desc = "Resize up" },
-		{ "<M-l>", "<cmd>lua require('smart-splits').resize_right()<CR>", desc = "Resize right" },
+vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
+vim.pack.add({
+	{
+		src = "https://github.com/mrjones2014/smart-splits.nvim",
 	},
-}
+})
+
+require("smart-splits").setup({
+	-- Movement
+	vim.keymap.set("n", "<C-h>", function()
+		require("smart-splits").move_cursor_left()
+	end, { desc = "Move cursor left" }),
+	vim.keymap.set("n", "<C-j>", function()
+		require("smart-splits").move_cursor_down()
+	end, { desc = "Move cursor down" }),
+	vim.keymap.set("n", "<C-k>", function()
+		require("smart-splits").move_cursor_up()
+	end, { desc = "Move cursor up" }),
+	vim.keymap.set("n", "<C-l>", function()
+		require("smart-splits").move_cursor_right()
+	end, { desc = "Move cursor right" }),
+	-- Resize
+	vim.keymap.set("n", "<M-h>", function()
+		require("smart-splits").resize_left()
+	end, { desc = "Resize left" }),
+	vim.keymap.set("n", "<M-j>", function()
+		require("smart-splits").resize_down()
+	end, { desc = "Resize down" }),
+	vim.keymap.set("n", "<M-k>", function()
+		require("smart-splits").resize_up()
+	end, { desc = "Resize up" }),
+	vim.keymap.set("n", "<M-l>", function()
+		require("smart-splits").resize_right()
+	end, { desc = "Resize right" }),
+})
