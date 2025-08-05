@@ -5,6 +5,7 @@ require("config.lsp")
 require("config.keymaps")
 require("config.autocmds")
 -- Plugins --
+require("pluginstmp.catppuccin")
 require("pluginstmp.snacks")
 require("pluginstmp.mini-icons")
 require("pluginstmp.smart-splits")
