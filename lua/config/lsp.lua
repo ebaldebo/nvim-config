@@ -75,55 +75,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				end,
 			})
 		end
-
-		if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
-			vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
-
-			local kind_icons = {
-				Text = "󰉿",
-				Method = "󰆧",
-				Function = "󰊕",
-				Constructor = "",
-				Field = "󰜢",
-				Variable = "󰀫",
-				Class = "󰠱",
-				Interface = "",
-				Module = "",
-				Property = "󰜢",
-				Unit = "󰑭",
-				Value = "󰎠",
-				Enum = "",
-				Keyword = "󰌋",
-				Snippet = "",
-				Color = "󰏘",
-				File = "󰈙",
-				Reference = "󰈇",
-				Folder = "󰉋",
-				EnumMember = "",
-				Constant = "󰏿",
-				Struct = "󰙅",
-				Event = "",
-				Operator = "󰆕",
-				TypeParameter = "",
-			}
-
-			vim.lsp.completion.enable(true, client.id, event.buf, {
-				autotrigger = true,
-				convert = function(item)
-					local kind = vim.lsp.protocol.CompletionItemKind[item.kind] or "Text"
-					local icon = kind_icons[kind] or ""
-
-					return {
-						abbr = item.label,
-						word = item.label,
-						menu = icon,
-					}
-				end,
-			})
-
-			vim.keymap.set("i", "<C-Space>", function()
-				vim.lsp.completion.get()
-			end)
-		end
 	end,
 })
