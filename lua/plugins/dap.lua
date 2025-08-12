@@ -42,6 +42,10 @@ vim.keymap.set("n", "<space>db", function()
 	require("dap").toggle_breakpoint()
 end, { desc = "Debug Toggle breakpoint" })
 
+vim.keymap.set("n", "<space>dB", function()
+	require("dap").clear_breakpoints()
+end, { desc = "Debug Clear breakpoints" })
+
 vim.keymap.set("n", "<space>dk", function()
 	require("dapui").eval(nil, { enter = true })
 end, { desc = "Debug evaluate" })
