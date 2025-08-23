@@ -6,3 +6,4 @@ vim.pack.add({
 })
 
 vim.keymap.set("n", "<leader>sq", ":DBUIToggle<CR>", { desc = "Toggle Dadbod UI" })
+vim.keymap.set("n", "<leader>sl", ":DBUILastQueryInfo<CR>", { desc = "Last Query Info" })
