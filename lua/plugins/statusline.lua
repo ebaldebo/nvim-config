@@ -22,6 +22,12 @@ require("lualine").setup({
 				fmt = function(str)
 					return dmode_enabled and "DEBUG" or str
 				end,
+				color = function()
+					if dmode_enabled then
+						return { bg = "#f38ba8", fg = "#11111b" }
+					end
+					return nil
+				end,
 			},
 		},
 		lualine_b = {
