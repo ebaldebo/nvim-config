@@ -1,4 +1,3 @@
-vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
 vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
 	"https://github.com/ebaldebo/project-finder.nvim",

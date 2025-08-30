@@ -1,4 +1,3 @@
-vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
 vim.pack.add({
 	{
 		src = "https://github.com/mrjones2014/smart-splits.nvim",

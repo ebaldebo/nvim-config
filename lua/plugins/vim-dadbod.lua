@@ -1,4 +1,3 @@
-vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
 vim.pack.add({
 	"https://github.com/kristijanhusak/vim-dadbod-ui",
 	"https://github.com/tpope/vim-dadbod",

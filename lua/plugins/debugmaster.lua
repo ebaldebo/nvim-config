@@ -1,4 +1,3 @@
-vim.opt.packpath:prepend(vim.fn.stdpath("data") .. "/site")
 vim.pack.add({
 	"https://github.com/mfussenegger/nvim-dap",
 	"https://github.com/jbyuki/one-small-step-for-vimkind",
