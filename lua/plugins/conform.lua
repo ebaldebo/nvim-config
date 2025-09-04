@@ -7,6 +7,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		go = { "gofumpt", "goimports" },
 		nix = { "nixfmt" },
+		python = { "ruff" },
 		-- ansible = { "ansible-lint" },
 		-- rust = { "rustfmt" },
 		-- cpp = { "clang_format" },

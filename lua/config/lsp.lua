@@ -12,6 +12,7 @@ vim.lsp.enable({
 	"golangci_lint_ls",
 	"lua_ls",
 	"nil_ls",
+	"pyright",
 })
 
 vim.diagnostic.config({
