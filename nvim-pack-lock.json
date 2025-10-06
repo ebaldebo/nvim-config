@@ -1,0 +1,111 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "a999ddc",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "conform.nvim": {
+      "rev": "9d859cb",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "debugmaster.nvim": {
+      "rev": "3d144b9",
+      "src": "https://github.com/miroshQa/debugmaster.nvim"
+    },
+    "fzf-lua": {
+      "rev": "a13c5c5",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "gitsigns.nvim": {
+      "rev": "1ee5c1f",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "guess-indent.nvim": {
+      "rev": "84a4987",
+      "src": "https://github.com/nmac427/guess-indent.nvim"
+    },
+    "lensline.nvim": {
+      "rev": "6d0beaa",
+      "src": "https://github.com/oribarilan/lensline.nvim",
+      "version": "'release/2.x'"
+    },
+    "lualine.nvim": {
+      "rev": "b8c2315",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "mini.icons": {
+      "rev": "2847986",
+      "src": "https://github.com/echasnovski/mini.icons"
+    },
+    "nvim": {
+      "rev": "e79d09f",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "nvim-dap": {
+      "rev": "48570d8",
+      "src": "https://github.com/mfussenegger/nvim-dap"
+    },
+    "nvim-dap-go": {
+      "rev": "b442115",
+      "src": "https://github.com/leoluz/nvim-dap-go"
+    },
+    "nvim-lspconfig": {
+      "rev": "e688b48",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "42fc28ba",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'master'"
+    },
+    "nvim-treesitter-textobjects": {
+      "rev": "71385f1",
+      "src": "http://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "version": "'master'"
+    },
+    "oil.nvim": {
+      "rev": "919e155",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "one-small-step-for-vimkind": {
+      "rev": "99c22f1",
+      "src": "https://github.com/jbyuki/one-small-step-for-vimkind"
+    },
+    "plugin-view.nvim": {
+      "rev": "369c80a",
+      "src": "https://github.com/adriankarlen/plugin-view.nvim"
+    },
+    "project-finder.nvim": {
+      "rev": "fba471f",
+      "src": "https://github.com/ebaldebo/project-finder.nvim"
+    },
+    "render-markdown.nvim": {
+      "rev": "7e6af36",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
+    "smart-splits.nvim": {
+      "rev": "2413efb",
+      "src": "https://github.com/mrjones2014/smart-splits.nvim"
+    },
+    "snacks.nvim": {
+      "rev": "bfe8c26",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "vim-dadbod": {
+      "rev": "e95afed",
+      "src": "https://github.com/tpope/vim-dadbod"
+    },
+    "vim-dadbod-completion": {
+      "rev": "a8dac0b",
+      "src": "https://github.com/kristijanhusak/vim-dadbod-completion"
+    },
+    "vim-dadbod-ui": {
+      "rev": "e8b53c0",
+      "src": "https://github.com/kristijanhusak/vim-dadbod-ui"
+    },
+    "which-key.nvim": {
+      "rev": "904308e",
+      "src": "https://github.com/folke/which-key.nvim"
+    }
+  }
+}

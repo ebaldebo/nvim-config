@@ -1,7 +1,7 @@
 vim.pack.add({
 	{
 		src = "https://github.com/oribarilan/lensline.nvim",
-		version = "release/1.x",
+		version = "release/2.x",
 	},
 })
 
