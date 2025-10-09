@@ -1,11 +1,11 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "a999ddc",
+      "rev": "2b44b9c",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
-      "rev": "9d859cb",
+      "rev": "fbcb4fa",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "debugmaster.nvim": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/miroshQa/debugmaster.nvim"
     },
     "fzf-lua": {
-      "rev": "a13c5c5",
+      "rev": "db3ccff",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
@@ -38,11 +38,11 @@
       "src": "https://github.com/echasnovski/mini.icons"
     },
     "nvim": {
-      "rev": "e79d09f",
+      "rev": "af58927",
       "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-dap": {
-      "rev": "48570d8",
+      "rev": "881f7dc",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
@@ -80,15 +80,15 @@
       "src": "https://github.com/ebaldebo/project-finder.nvim"
     },
     "render-markdown.nvim": {
-      "rev": "7e6af36",
+      "rev": "2064980",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "2413efb",
+      "rev": "9aaa142",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
-      "rev": "bfe8c26",
+      "rev": "dae80fb",
       "src": "https://github.com/folke/snacks.nvim"
     },
     "vim-dadbod": {
@@ -104,7 +104,7 @@
       "src": "https://github.com/kristijanhusak/vim-dadbod-ui"
     },
     "which-key.nvim": {
-      "rev": "904308e",
+      "rev": "b4177e3",
       "src": "https://github.com/folke/which-key.nvim"
     }
   }
