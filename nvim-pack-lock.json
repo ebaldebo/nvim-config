@@ -1,11 +1,11 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "2b44b9c",
+      "rev": "8743384",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
-      "rev": "fbcb4fa",
+      "rev": "9fd3d5e",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "debugmaster.nvim": {
@@ -13,11 +13,11 @@
       "src": "https://github.com/miroshQa/debugmaster.nvim"
     },
     "fzf-lua": {
-      "rev": "db3ccff",
+      "rev": "fb654cb",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "1ee5c1f",
+      "rev": "20ad441",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "guess-indent.nvim": {
@@ -30,7 +30,7 @@
       "version": "'release/2.x'"
     },
     "lualine.nvim": {
-      "rev": "b8c2315",
+      "rev": "3946f01",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mini.icons": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-dap": {
-      "rev": "881f7dc",
+      "rev": "6782b09",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
@@ -50,7 +50,7 @@
       "src": "https://github.com/leoluz/nvim-dap-go"
     },
     "nvim-lspconfig": {
-      "rev": "e688b48",
+      "rev": "ececa53",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -59,16 +59,16 @@
       "version": "'master'"
     },
     "nvim-treesitter-textobjects": {
-      "rev": "71385f1",
+      "rev": "a9742cb",
       "src": "http://github.com/nvim-treesitter/nvim-treesitter-textobjects",
       "version": "'master'"
     },
     "oil.nvim": {
-      "rev": "919e155",
+      "rev": "7e1cd77",
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "one-small-step-for-vimkind": {
-      "rev": "99c22f1",
+      "rev": "8fdbb4e",
       "src": "https://github.com/jbyuki/one-small-step-for-vimkind"
     },
     "plugin-view.nvim": {
@@ -80,15 +80,15 @@
       "src": "https://github.com/ebaldebo/project-finder.nvim"
     },
     "render-markdown.nvim": {
-      "rev": "2064980",
+      "rev": "475d3ad",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "9aaa142",
+      "rev": "9a26145",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
-      "rev": "dae80fb",
+      "rev": "4d9666e",
       "src": "https://github.com/folke/snacks.nvim"
     },
     "vim-dadbod": {
@@ -100,7 +100,7 @@
       "src": "https://github.com/kristijanhusak/vim-dadbod-completion"
     },
     "vim-dadbod-ui": {
-      "rev": "e8b53c0",
+      "rev": "5a83ee1",
       "src": "https://github.com/kristijanhusak/vim-dadbod-ui"
     },
     "which-key.nvim": {
