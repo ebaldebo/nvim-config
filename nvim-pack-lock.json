@@ -1,11 +1,11 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "8743384",
+      "rev": "40380e7",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
-      "rev": "9fd3d5e",
+      "rev": "cde4da5",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "debugmaster.nvim": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/miroshQa/debugmaster.nvim"
     },
     "fzf-lua": {
-      "rev": "fb654cb",
+      "rev": "a8458b7",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
@@ -34,15 +34,15 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mini.icons": {
-      "rev": "2847986",
+      "rev": "ff2e4f1",
       "src": "https://github.com/echasnovski/mini.icons"
     },
     "nvim": {
-      "rev": "af58927",
+      "rev": "234fc04",
       "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-dap": {
-      "rev": "6782b09",
+      "rev": "e97dc47",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
@@ -50,7 +50,7 @@
       "src": "https://github.com/leoluz/nvim-dap-go"
     },
     "nvim-lspconfig": {
-      "rev": "ececa53",
+      "rev": "2010fc6",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -59,7 +59,7 @@
       "version": "'master'"
     },
     "nvim-treesitter-textobjects": {
-      "rev": "a9742cb",
+      "rev": "5ca4aaa",
       "src": "http://github.com/nvim-treesitter/nvim-treesitter-textobjects",
       "version": "'master'"
     },
@@ -80,15 +80,15 @@
       "src": "https://github.com/ebaldebo/project-finder.nvim"
     },
     "render-markdown.nvim": {
-      "rev": "475d3ad",
+      "rev": "060c911",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "9a26145",
+      "rev": "1611946",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
-      "rev": "4d9666e",
+      "rev": "b0a95a0",
       "src": "https://github.com/folke/snacks.nvim"
     },
     "vim-dadbod": {
@@ -100,11 +100,11 @@
       "src": "https://github.com/kristijanhusak/vim-dadbod-completion"
     },
     "vim-dadbod-ui": {
-      "rev": "5a83ee1",
+      "rev": "236179f",
       "src": "https://github.com/kristijanhusak/vim-dadbod-ui"
     },
     "which-key.nvim": {
-      "rev": "b4177e3",
+      "rev": "3aab214",
       "src": "https://github.com/folke/which-key.nvim"
     }
   }
