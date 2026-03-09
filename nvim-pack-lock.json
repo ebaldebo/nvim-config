@@ -68,7 +68,7 @@
     },
     "nvim-treesitter-textobjects": {
       "rev": "5ca4aaa6efdcc59be46b95a3e876300cfead05ef",
-      "src": "http://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
       "version": "'master'"
     },
     "oil.nvim": {

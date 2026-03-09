@@ -4,7 +4,7 @@ vim.pack.add({
 		version = "master",
 	},
 	{
-		src = "http://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+		src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 		version = "master",
 	},
 })
