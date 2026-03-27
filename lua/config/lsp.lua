@@ -13,6 +13,8 @@ vim.lsp.enable({
 	"lua_ls",
 	"nil_ls",
 	"pyright",
+	"ts_ls",
+	"eslint",
 })
 
 vim.diagnostic.config({

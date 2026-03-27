@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("User", {
 
 require("lualine").setup({
 	options = {
-		theme = "catppuccin",
+		theme = "catppuccin-nvim",
 	},
 	sections = {
 		lualine_a = {
