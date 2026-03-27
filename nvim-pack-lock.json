@@ -21,7 +21,7 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "guess-indent.nvim": {
-      "rev": "84a4987",
+      "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
       "src": "https://github.com/nmac427/guess-indent.nvim"
     },
     "image.nvim": {
@@ -54,7 +54,7 @@
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
-      "rev": "b442115",
+      "rev": "b4421153ead5d726603b02743ea40cf26a51ed5f",
       "src": "https://github.com/leoluz/nvim-dap-go"
     },
     "nvim-lspconfig": {
@@ -80,11 +80,11 @@
       "src": "https://github.com/jbyuki/one-small-step-for-vimkind"
     },
     "plugin-view.nvim": {
-      "rev": "369c80a",
+      "rev": "369c80aff5e71b1147f69ecbefa4b46d97f733d2",
       "src": "https://github.com/adriankarlen/plugin-view.nvim"
     },
     "project-finder.nvim": {
-      "rev": "fba471f",
+      "rev": "fba471f4a6b29703f83fd7b1f94750006ea83ea8",
       "src": "https://github.com/ebaldebo/project-finder.nvim"
     },
     "render-markdown.nvim": {
@@ -104,7 +104,7 @@
       "src": "https://github.com/tpope/vim-dadbod"
     },
     "vim-dadbod-completion": {
-      "rev": "a8dac0b",
+      "rev": "a8dac0b3cf6132c80dc9b18bef36d4cf7a9e1fe6",
       "src": "https://github.com/kristijanhusak/vim-dadbod-completion"
     },
     "vim-dadbod-ui": {
