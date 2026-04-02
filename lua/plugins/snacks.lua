@@ -13,9 +13,6 @@ require("snacks").setup({
 			col = 0,
 		},
 	},
-	picker = {
-		enabled = true,
-	},
 	indent = {
 		enabled = true,
 	},
@@ -25,12 +22,12 @@ require("snacks").setup({
 	terminal = {
 		enabled = true,
 	},
-
-	vim.keymap.set("n", "<leader>lg", function()
-		require("snacks").lazygit()
-	end, { desc = "Lazygit" }),
-
-	vim.keymap.set("n", "<leader>'", function()
-		require("snacks").terminal()
-	end, { desc = "Toggle Terminal" }),
 })
+
+vim.keymap.set("n", "<leader>lg", function()
+	require("snacks").lazygit()
+end, { desc = "Lazygit" })
+
+vim.keymap.set("n", "<leader>'", function()
+	require("snacks").terminal()
+end, { desc = "Toggle Terminal" })
