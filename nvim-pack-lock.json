@@ -8,10 +8,6 @@
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
     },
-    "debugmaster.nvim": {
-      "rev": "505d9a269d657ce8e0fa5601e0530f0d8798038c",
-      "src": "https://github.com/miroshQa/debugmaster.nvim"
-    },
     "fzf-lua": {
       "rev": "c9e7b7bfbd01f949164988ee1684035468e1995c",
       "src": "https://github.com/ibhagwan/fzf-lua"
@@ -23,10 +19,6 @@
     "guess-indent.nvim": {
       "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
       "src": "https://github.com/nmac427/guess-indent.nvim"
-    },
-    "image.nvim": {
-      "rev": "da2be65c153ba15a14a342b05591652a6df70d58",
-      "src": "https://github.com/3rd/image.nvim"
     },
     "lensline.nvim": {
       "rev": "6d0beaa5548ff54b8f3d9b3195aea1369ccf62a4",
@@ -41,10 +33,6 @@
       "rev": "5b9076dae1bfbe47ba4a14bc8b967cde0ab5d77e",
       "src": "https://github.com/echasnovski/mini.icons"
     },
-    "molten-nvim": {
-      "rev": "c1db39e78fe18559d8f2204bf5c4d476bdc80d3e",
-      "src": "https://github.com/benlubas/molten-nvim"
-    },
     "nvim": {
       "rev": "60cf331ed7ecb19617c32bf61eb0da78c4c7bb05",
       "src": "https://github.com/catppuccin/nvim"
@@ -57,9 +45,17 @@
       "rev": "b4421153ead5d726603b02743ea40cf26a51ed5f",
       "src": "https://github.com/leoluz/nvim-dap-go"
     },
+    "nvim-dap-ui": {
+      "rev": "f5b6673f374626515401c5bc51b005f784a4f252",
+      "src": "https://github.com/rcarriga/nvim-dap-ui"
+    },
     "nvim-lspconfig": {
       "rev": "8e2084bf5e40c79c1f42210a6ef96a0a4793a763",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-nio": {
+      "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",
+      "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
       "rev": "c82bf96f0a773d85304feeb695e1e23b2207ac35",

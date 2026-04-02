@@ -2,33 +2,12 @@ vim.pack.add({
 	"https://github.com/nvim-lualine/lualine.nvim",
 })
 
-local dmode_enabled = false
-vim.api.nvim_create_autocmd("User", {
-	pattern = "DebugModeChanged",
-	callback = function(args)
-		dmode_enabled = args.data.enabled
-	end,
-})
-
 require("lualine").setup({
 	options = {
 		theme = "catppuccin-nvim",
 	},
 	sections = {
-		lualine_a = {
-			{
-				"mode",
-				fmt = function(str)
-					return dmode_enabled and "DEBUG" or str
-				end,
-				color = function()
-					if dmode_enabled then
-						return { bg = "#f38ba8", fg = "#11111b" }
-					end
-					return nil
-				end,
-			},
-		},
+		lualine_a = { "mode" },
 		lualine_b = {
 			"branch",
 			"diff",
