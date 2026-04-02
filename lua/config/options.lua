@@ -64,3 +64,6 @@ vim.opt.modifiable = true -- Allow modifying buffers
 -- Split options
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- Window options
+vim.o.winborder = "rounded"
