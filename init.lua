@@ -25,6 +25,11 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 -- Plugins --
+-- Native --
+vim.cmd.packadd("nvim.undotree")
+vim.keymap.set("n", "<leader>u", "<cmd>Undotree<cr>", { desc = "Toggle [u]ndotree" })
+
+-- Third-party --
 require("plugins.plugin-view")
 require("plugins.catppuccin")
 require("plugins.nvim-lspconfig")
