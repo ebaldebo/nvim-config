@@ -15,6 +15,7 @@ vim.lsp.enable({
 	"pyright",
 	"ts_ls",
 	"eslint",
+	"svelte",
 })
 
 vim.diagnostic.config({

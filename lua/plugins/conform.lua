@@ -16,6 +16,7 @@ require("conform").setup({
 		html = { "prettierd" },
 		json = { "prettierd" },
 		jsonc = { "prettierd" },
+		svelte = { "prettierd" },
 		-- ansible = { "ansible-lint" },
 		-- rust = { "rustfmt" },
 		-- cpp = { "clang_format" },
