@@ -10,5 +10,5 @@
     "workspace.checkThirdParty": false,
     "workspace.library": [
         "$VIMRUNTIME"
-    ],
+    ]
 }
