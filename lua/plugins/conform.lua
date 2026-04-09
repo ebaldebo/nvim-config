@@ -7,7 +7,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		go = { "gofumpt", "goimports" },
 		nix = { "nixfmt" },
-		python = { "ruff" },
+		python = { "ruff_fix", "ruff_format" },
 		javascript = { "prettierd" },
 		typescript = { "prettierd" },
 		javascriptreact = { "prettierd" },

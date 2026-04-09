@@ -3,7 +3,16 @@ vim.pack.add({
 })
 
 require("blink.cmp").setup({
-	keymap = { preset = "default" },
+	keymap = {
+		preset = "default",
+		["<Tab>"] = {
+			"snippet_forward",
+			function()
+				return vim.lsp.inline_completion.get()
+			end,
+			"fallback",
+		},
+	},
 	appearance = {
 		nerd_font_variant = "mono",
 	},

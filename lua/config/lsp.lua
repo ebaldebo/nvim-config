@@ -93,11 +93,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion) then
 				vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
 				vim.lsp.inline_completion.enable(true)
-				map("<C-j>", function()
-					if not vim.lsp.inline_completion.get() then
-						return "<Tab>"
-					end
-				end, "Get the current inline completion", "i")
 			end
 		end
 	end,
