@@ -2,7 +2,9 @@ vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
 })
 
-require("fzf-lua").setup({})
+require("fzf-lua").setup({
+	ui_select = true,
+})
 
 vim.keymap.set("n", "<leader>ff", function()
 	require("fzf-lua").files()
