@@ -17,6 +17,7 @@ require("conform").setup({
 		json = { "prettierd" },
 		jsonc = { "prettierd" },
 		svelte = { "prettierd" },
+		yaml = { "yamlfmt" },
 		-- ansible = { "ansible-lint" },
 		-- rust = { "rustfmt" },
 		-- cpp = { "clang_format" },
