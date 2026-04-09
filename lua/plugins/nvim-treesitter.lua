@@ -16,11 +16,12 @@ vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("treesitter-auto-install", { clear = true }),
 	callback = function()
 		local ft = vim.bo.filetype
-		if ft == "" or not require("nvim-treesitter.parsers")[ft] then
+		local lang = vim.treesitter.language.get_lang(ft)
+		if ft == "" or not lang or not require("nvim-treesitter.parsers")[lang] then
 			return
 		end
-		if not pcall(vim.treesitter.language.inspect, ft) then
-			pcall(require("nvim-treesitter").install, { ft })
+		if not pcall(vim.treesitter.language.inspect, lang) then
+			pcall(require("nvim-treesitter").install, { lang })
 		end
 	end,
 })
@@ -29,8 +30,9 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("treesitter-features", { clear = true }),
 	callback = function()
+		local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
 		pcall(vim.treesitter.start)
-		if pcall(vim.treesitter.language.inspect, vim.bo.filetype) then
+		if lang and pcall(vim.treesitter.language.inspect, lang) then
 			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 		end
 	end,
@@ -61,5 +63,4 @@ end, { desc = "Select around class" })
 vim.keymap.set({ "x", "o" }, "ao", function()
 	require("nvim-treesitter-textobjects.select").select_textobject("@comment.outer", "textobjects")
 end, { desc = "Select around comment" })
-
 
