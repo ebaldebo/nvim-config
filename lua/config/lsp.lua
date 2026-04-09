@@ -86,14 +86,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 					group = detach_augroup,
 					buffer = event.buf,
 					callback = function(event2)
-						vim.lsp.buf.clear_references()
+						vim.lsp.util.buf_clear_references(event2.buf)
 						vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buffer = event2.buf })
 					end,
 				})
 			end
 			-- Inline completion
 			if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion) then
-				vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
+				vim.opt_local.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
 				vim.lsp.inline_completion.enable(true)
 			end
 		end
