@@ -2,6 +2,10 @@ vim.pack.add({
 	"https://github.com/nvim-lualine/lualine.nvim",
 })
 
+local function cwd_name()
+	return vim.fs.basename(vim.fn.getcwd())
+end
+
 require("lualine").setup({
 	options = {
 		theme = "catppuccin-nvim",
@@ -9,6 +13,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = {
+			cwd_name,
 			"branch",
 			"diff",
 			"diagnostics",
