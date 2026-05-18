@@ -3,14 +3,6 @@ vim.pack.add({
 })
 
 require("snacks").setup({
-	input = {
-		enabled = true,
-		win = {
-			relative = "cursor",
-			row = 1,
-			col = 0,
-		},
-	},
 	indent = {
 		enabled = true,
 	},
